@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+
+  <STyle>
+    * {
+  box-sizing: border-box;
+}
+
+
+
+header {
+  background-color: #ffffff;
+  color: #fff;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0 0 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border: 0;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+.nav-bar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(85, 85, 85);
+    }
+
+    .nav-li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color:white;
+        text-align: center;
+        padding: 13px 15px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active){
+        background-color: black;
+    }
+
+    .active {
+        background-color: rgb(40, 57, 134);
+    }
+
+
+
+  </STyle>
+</head>
+<body>
+
+    <nav>
+        <ul class="nav-bar">
+            <li class="nav-li"><a href="main page.html"> Main page </a></li>
+            <li class="nav-li"><a href="categories.html">  Categories  </a> </li>
+            <li class="nav-li"><a href="Referral program.html">  Referral program  </a> </li>
+            <li class="nav-li"><a href="About us.html"> About us </a></li>
+            <li class="nav-li"><a class="active" href="Contact us.html">  Contact us  </a> </li>
+        </ul>
+    </nav>
+
+
+  <header>
+    <h1>Best Gadgets Contact Us</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Contact Information</h2>
+      <p>Best Gadgets,</p>
+      <p>123 Main Street,</p>
+      <p>Colombo 00700,</p>
+      <p>Sri Lanka.</p>
+     <br>   
+      <p>Phone: +94 11 234 5678</p>
+     <br> 
+      <p>Email: info@bestgadgets.lk</p>
+    </section>
+    <section>
+      <h2>Live Chat</h2>
+      <p>Our live chat is available 24/7 to answer your questions.</p>
+      <a href="https://bestgadgets.lk/live-chat">Start Chatting</a>
+    </section>
+    <section>
+      <h2>Submit a Request</h2>
+      <p>If you have a question or a concern that we can help you with, please submit a request.</p>
+      <form action="https://bestgadgets.lk/contact-us/submit" method="post">
+        <input type="text" name="name" placeholder="Your Name">
+        <input type="email" name="email" placeholder="Your Email">
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea name="message" placeholder="Your Message"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+    <section>
+      <h2>Feedback</h2>
+      <p>We appreciate your feedback. Please let us know how we can improve your experience.</p>
+      <a href="https://bestgadgets.lk/contact-us/feedback">Submit Feedback</a>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright &copy; Best Gadgets 2023</p>
+  </footer>
+</body>
+</html>

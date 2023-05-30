@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+.countdown {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.time {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(176, 190, 255);
+  transition: background-color 0.3s ease;
+}
+
+.time:hover {
+  background-color: #d2d5ff;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+.nav-bar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(85, 85, 85);
+    }
+
+    .nav-li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color:white;
+        text-align: center;
+        padding: 13px 15px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active){
+        background-color: black;
+    }
+
+    .active {
+        background-color: rgb(40, 57, 134);
+    }
+
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul class="nav-bar">
+            <li class="nav-li"><a href="main page.html"> Main page </a></li>
+            <li class="nav-li"><a href="categories.html">  Categories  </a> </li>
+            <li class="nav-li"><a class="active"href="Referral program.html">  Referral program  </a> </li>
+            <li class="nav-li"><a href="About us.html"> About us </a></li>
+            <li class="nav-li"><a href="Contact us.html">  Contact us  </a> </li>
+        </ul>
+    </nav>
+
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <img src=Referral%20program.jpg
+            alt="Referral image" class="Referral" >
+    </div>
+        
+    <h1>Referral Program Coming Soon!</h1>
+
+We're excited to announce that our referral program is coming soon! This program will allow you to earn rewards for referring your friends and family to our site.
+
+<div class="countdown">
+    <h2>Referral Program Starts In:</h2>
+    <div id="days" class="time"></div>
+    <div id="hours" class="time"></div>
+    <div id="minutes" class="time"></div>
+    <div id="seconds" class="time"></div>
+  </div>
+
+  <script src="script.js"></script>
+
+
+<br><br>
+<h2>Referral Program Payment Percentages</h2>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Referrals</th>
+        <th>Payment Percentage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>5%</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>10%</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>15%</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>20%</td>
+      </tr>
+      <tr>
+        <td>5 or more</td>
+        <td>25%</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br><br>
+
+  <script>
+
+const programStartDate = new Date(2023, 7, 1, 12, 0, 0);
+
+
+const countdownTimer = setInterval(updateCountdown, 1000);
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const timeDifference = programStartDate - now;
+
+ 
+  const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+  
+  document.getElementById("days").innerText = days + "d";
+  document.getElementById("hours").innerText = hours + "h";
+  document.getElementById("minutes").innerText = minutes + "m";
+  document.getElementById("seconds").innerText = seconds + "s";
+
+ 
+  if (timeDifference < 0) {
+    clearInterval(countdownTimer);
+    document.getElementById("days").innerText = "0d";
+    document.getElementById("hours").innerText = "0h";
+    document.getElementById("minutes").innerText = "0m";
+    document.getElementById("seconds").innerText = "0s";
+  }
+
+  
+  const countdownElements = document.getElementsByClassName("time");
+  for (let i = 0; i < countdownElements.length; i++) {
+    countdownElements[i].style.animation = "fadeIn 1s ease-in-out";
+  }
+}
+
+</script>
+
+
+</body>
+</html>
