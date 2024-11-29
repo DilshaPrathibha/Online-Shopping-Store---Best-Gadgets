@@ -6,53 +6,83 @@
 
 
   <link rel="stylesheet" type="text/css" href="Main page.css">
-
-<style>
-
-  .section-title{
-color: #fff;
-  }
-
-  .social-media {
-  text-align: center;
-  margin-top: 45px;
-  margin-bottom: 1px;
-  background-color: rgb(85, 85, 85);
-  }
-
-.social-media-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.social-media-item {
-  display: inline-block;
-  margin: 0 10px;
-  margin-bottom: 20px;
-}
-
-.social-media-item a {
-  display: block;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background-color: #fff;
-  color: #000;
-  text-decoration: none;
-}
-
-.social-media-item a img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-</style>
-
-
+  <link rel="stylesheet" type="text/css" href="style.css">
   <title>Best Gadgets</title>
 
+  
+  
+ 
+  <style>
+
+.container{
+            display: flex;
+            align-items:baseline;
+            border: 2px solid;
+            height: 90vh;
+            flex-wrap: wrap;
+        }
+        
+        .all-lists{
+           
+            display: flex;
+           justify-content: space-between;
+           flex-wrap: wrap; /* warping for responsivity (vertical view)*/
+        }
+
+        .item{
+            text-align: center;
+            width:30%;
+            height: auto;
+            background-color: hsl(209, 100%, 91%);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.527);
+
+            float: left; /* headings box comes to right and other texts appearing in left side space */
+            min-width:200px;
+            max-width: 350px;
+            width: 30%;
+            
+            margin-left:4%;
+            margin-right:4%;
+
+            margin-bottom: 20px;
+            margin-top: 50px;
+            /* margin: auto; - to middle */
+            padding: 20px;
+        }
+
+        .item:hover{
+            border: 2px solid  rgb(40, 57, 134);
+            
+        }
+
+        .item img{
+          width: 100%; /* set all jpg png files to same size */
+          height: auto; 
+        }
+
+        @media screen and (max-width: 1010px) { /*adjust for responsive */
+          .item {
+                width: 80%;
+                margin-bottom: 10px auto;
+                
+                float: none;
+            }
+
+            .all-lists {
+                width: 80%;
+                margin: 1px auto;
+                float: none;
+            }
+
+            .itemlist{
+                width: 90%;
+                margin: 10px auto;
+                float: none;
+            }
+           
+        }
+
+  </style>
   
 </head>
 <body>
@@ -155,22 +185,27 @@ color: #fff;
   </div>
 </nav>
 
+<footer>
+  <div class="social-media">
+    <br>
+    <h3 class="section-title">Social Media</h3>
+    <ul class="social-media-list">
+      <li class="social-media-item">
+        <a href="https://www.facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook Icon"></a>
+      </li>
+      <li class="social-media-item">
+        <a href="https://www.twitter.com"target="_blank"><img src="twitter-icon.png" alt="Twitter Icon"></a>
+      </li>
+      <li class="social-media-item">
+        <a href="https://www.instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram Icon"></a>
+      </li>
+    </ul>
+    
+    <p id="copyr"> <small> Copyright &copy; Best Gadgets 2023</small></p>
+    <br>
+  </div>
+</footer>
 
-<div class="social-media">
-  <br>
-  <h3 class="section-title">Social Media</h3>
-  <ul class="social-media-list">
-    <li class="social-media-item">
-      <a href="https://www.facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook Icon"></a>
-    </li>
-    <li class="social-media-item">
-      <a href="https://www.twitter.com"target="_blank"><img src="twitter-icon.png" alt="Twitter Icon"></a>
-    </li>
-    <li class="social-media-item">
-      <a href="https://www.instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram Icon"></a>
-    </li>
-  </ul>
-</div>
 </body>
 
 
